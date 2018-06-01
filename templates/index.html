@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/index/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file">
+    <input type="submit" value="提交"/>
+</form>
+<br><br>
+{% if img1 %}
+    <img src="{{ img1 }}"/>
+    <img src="{{ img2 }}"/>
+{% endif %}
+</body>
+</html>
